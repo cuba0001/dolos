@@ -1,4 +1,6 @@
 /target
+/dolos-root-ca.key.pem
 /.idea/modules.xml
 /.idea/vcs.xml
 /.idea/dolos.iml
+.idea
