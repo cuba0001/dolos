@@ -27,7 +27,8 @@ pub struct RootCa {
 
 impl Configuration {
     pub fn load() -> Result<Self, ProxyError> {
-        let cert_pem = fs::read_to_string(Path::new(CA_CERT_PATH)).context("read CA certificate")?;
+        let cert_pem =
+            fs::read_to_string(Path::new(CA_CERT_PATH)).context("read CA certificate")?;
         let key_pem = fs::read_to_string(Path::new(CA_KEY_PATH)).context("read CA private key")?;
         let params =
             CertificateParams::from_ca_cert_pem(&cert_pem).context("parse CA certificate")?;
